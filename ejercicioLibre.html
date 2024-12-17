@@ -1,17 +1,18 @@
-<!DOCTYPE html>
-<html lang="es" xml:lang="es"><head>
+<!DOCTYPE HTML>
+<html lang="es" xml:lang="es">
+<head>
     <!-- Metadatos -->
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <title>F1 Desktop - Gestión de Pilotos por Década</title>
-    <meta name="author" content="Nestor Fernandez Garcia">
-    <meta name="description" content="Aplicación para gestionar pilotos con más campeonatos en cada década de la F1">
-    <meta name="keywords" content="F1, Pilotos, Campeonatos, Décadas, CSV">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Nestor Fernandez Garcia" />
+    <meta name="description" content="Aplicación para gestionar pilotos con más campeonatos en cada década de la F1" />
+    <meta name="keywords" content="F1, Pilotos, Campeonatos, Décadas, CSV" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Enlaces a hojas de estilo -->
-    <link rel="stylesheet" type="text/css" href="estilo/estilo.css">
-    <link rel="stylesheet" type="text/css" href="estilo/layout.css">
-    <link rel="icon" href="multimedia/imagenes/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="../estilo/estilo.css" />
+    <link rel="stylesheet" type="text/css" href="../estilo/layout.css" />
+    <link rel="icon" href="../multimedia/imagenes/favicon.ico" />
 </head>
 
 <body>
@@ -26,7 +27,6 @@
             <a href="../juegos.html" class="active">Juegos</a>
             <a href="../circuito.html" title="Pestaña de circuito">Circuito</a>
             <a href="../meteorologia.html" title="Pestaña de meteorologia">Meteorologia</a>
-            
         </nav>
     </header>
 
@@ -39,7 +39,8 @@
             <form action="ficheros.php" method="POST">
                 <input type="submit" value="Crear Base de Datos y Tablas" name="crear">
             </form>
-                    </section>
+            <?php if (!empty($mensajeCrear)) echo $mensajeCrear; ?>
+        </section>
 
         <hr>
 
@@ -47,13 +48,15 @@
         <section>
             <h2>Importar Pilotos desde CSV</h2>
             <form action="ficheros.php" method="POST" enctype="multipart/form-data">
-                <label>Selecciona el fichero CSV(PilotosConMasCampeonatos.csv):
-                    <input type="file" name="csv_file" accept=".csv" required="">
+                <label>
+                    Selecciona el fichero CSV (PilotosConMasCampeonatos.csv):
+                    <input type="file" name="csv_file" accept=".csv" required>
                 </label>
                 <br><br>
                 <input type="submit" value="Importar CSV" name="importar">
             </form>
-                    </section>
+            <?php if (!empty($mensajeImportar)) echo $mensajeImportar; ?>
+        </section>
 
         <hr>
 
@@ -61,8 +64,9 @@
         <section>
             <h2>Exportar Pilotos a CSV</h2>
             <form action="ficheros.php" method="POST">
-                <label>Selecciona la Década:
-                    <select name="decada_exportar" required="">
+                <label>
+                    Selecciona la Década:
+                    <select name="decada_exportar" required>
                         <option value="">--Selecciona--</option>
                         <option value="50s">50s</option>
                         <option value="60s">60s</option>
@@ -76,16 +80,26 @@
                 <br><br>
                 <input type="submit" value="Exportar CSV" name="exportar">
             </form>
-                    </section>
+            <?php if (!empty($mensajeExportar)) echo $mensajeExportar; ?>
+        </section>
 
         <hr>
 
         <!-- Sección para Mostrar Pilotos por Década -->
         <section>
-    <h2>Pilotos por Década</h2>
-    <p>Importa un archivo CSV para mostrar las tablas.</p></section>
-
+            <h2>Pilotos por Década</h2>
+            <?php
+                if (isset($_SESSION['importacion']) && $_SESSION['importacion']['estado'] === true) {
+                    if ($conn->select_db('decadas')) {
+                        mostrarTablas($conn);
+                    } else {
+                        echo "<p>No se pudo seleccionar la base de datos 'decadas'.</p>";
+                    }
+                } else {
+                    echo "<p>Importa un archivo CSV para mostrar las tablas.</p>";
+                }
+            ?>
+        </section>
     </main>
-
-
-</body></html>
+</body>
+</html>
