@@ -47,10 +47,8 @@
         <section>
             <h2>Importar Pilotos desde CSV</h2>
             <form action="ficheros.php" method="POST" enctype="multipart/form-data">
-                <label>
-                    Selecciona el fichero CSV (PilotosConMasCampeonatos.csv):
-                    <input type="file" name="csv_file" accept=".csv" required>
-                </label>
+                <label for="csv_file">Selecciona el fichero CSV (PilotosConMasCampeonatos.csv):</label>
+                <input id="csv_file" type="file" name="csv_file" accept=".csv" required>
                 <br><br>
                 <input type="submit" value="Importar CSV" name="importar">
             </form>
@@ -62,20 +60,28 @@
         <section>
             <h2>Exportar Pilotos a CSV</h2>
             <form action="ficheros.php" method="POST">
+                <p>Selecciona la Década:</p>
                 <label>
-                    Selecciona la Década:
-                    <select name="decada_exportar" required>
-                        <option value="">--Selecciona--</option>
-                        <option value="50s">50s</option>
-                        <option value="60s">60s</option>
-                        <option value="70s">70s</option>
-                        <option value="80s">80s</option>
-                        <option value="90s">90s</option>
-                        <option value="2000s">2000s</option>
-                        <option value="2010s">2010s</option>
-                    </select>
-                </label>
-                <br><br>
+                    <input type="radio" name="decada_exportar" value="50s" required> 50s
+                </label><br>
+                <label>
+                    <input type="radio" name="decada_exportar" value="60s" required> 60s
+                </label><br>
+                <label>
+                    <input type="radio" name="decada_exportar" value="70s" required> 70s
+                </label><br>
+                <label>
+                    <input type="radio" name="decada_exportar" value="80s" required> 80s
+                </label><br>
+                <label>
+                    <input type="radio" name="decada_exportar" value="90s" required> 90s
+                </label><br>
+                <label>
+                    <input type="radio" name="decada_exportar" value="2000s" required> 2000s
+                </label><br>
+                <label>
+                    <input type="radio" name="decada_exportar" value="2010s" required> 2010s
+                </label><br><br>
                 <input type="submit" value="Exportar CSV" name="exportar">
             </form>
         </section>
