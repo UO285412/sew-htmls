@@ -1,0 +1,73 @@
+/* Especificidad (002) */
+main > section {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto auto auto auto;
+    gap: 1rem;
+    justify-items: center;
+    align-items: center;
+}
+
+/* Especificidad (003) */
+main > section h2 {
+    grid-column: span 4;
+    text-align: center;
+}
+
+/* Especificidad (003) */
+main > section > button {
+    grid-column: span 2;
+    padding: 0.5rem 1rem;
+}
+
+/* Especificidad (003) */
+main > section div {
+    width: 100%;
+    aspect-ratio: 1;
+    border-radius: 50%; /* Círculo perfecto */
+    background-color: #0007; /* Color de la luz apagada */
+    color:#000;
+    border: 0.4rem solid #000; /* Borde más oscuro */
+    transition: background-color 0.5s; /* Transición para el encendido */
+}
+
+/* Animaciones de encendido */
+/* Especificidad (022) */
+main.load div:nth-of-type(1) {
+    animation: light-up 0.5s forwards;
+}
+/*El color rojo se va alternando en cada luz cuando main tiene la clase load*/
+/* Especificidad (022) */
+main.load div:nth-of-type(2) {
+    animation: light-up 0.5s 0.5s forwards;
+}
+/* Especificidad (022) */
+main.load div:nth-of-type(3) {
+    animation: light-up 0.5s 1s forwards;
+}
+/* Especificidad (022) */
+main.load div:nth-of-type(4) {
+    animation: light-up 0.5s 1.5s forwards;
+}
+
+@keyframes light-up {
+    to {
+        background-color: red;
+    }
+}
+
+/* Animaciones de apagado */
+/*El color de primer plano lo hereda de div*/
+/* Especificidad (012) */
+main.unload div {
+    background-color: #0007; /* Todas las luces se apagan */
+    animation: light-off 0.5s forwards;
+}
+/*El color de primer plano lo hereda de div*/
+/*Cuando se apagan las luces el color se cambia a negro*/
+/*Redefinicion de background color*/
+@keyframes light-off {
+    to {
+        background-color: #0007;
+    }
+}

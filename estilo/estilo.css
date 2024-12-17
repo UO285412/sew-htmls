@@ -1,0 +1,284 @@
+/* Nestor Fernandez Garcia UO285412 */
+/* Especificidad: (0,0,1) */
+body {
+  font-family: "Arial Black", sans-serif;
+  color: #010100;
+  background-color: #a0e7e5;
+}
+
+/* Especificidad: (0,0,2) */
+/* Color por defecto de enlaces */
+header a {
+  text-decoration-line: none;
+}
+
+/* Especificidad: (0,0,1) */
+video {
+  width: 100%;
+  height: auto;
+}
+
+/* Especificidad: (0,0,1) */
+nav {
+  color: #010100;    
+  background-color: #ffffff;  
+}
+
+/* Especificidad: (0,0,2) */
+body > p {
+  font-size: 0.8rem;
+}
+
+/* Especificidad: (0,0,1) */
+table {
+  width: 100%; /* Asegura que la tabla ocupe el 100% del ancho disponible */
+  border-collapse: collapse; /* Elimina los espacios entre las celdas */
+  border: 0.2rem solid #800080; /* Borde de la tabla */
+}
+
+/* Especificidad: (0, 0, 1) */
+th, td {
+  border: 0.1rem solid #800080; /* Borde para las celdas */
+  padding: 0.625rem; /* Espaciado interno */
+  text-align: left; /* Alineación de texto */
+}
+
+/* Especificidad: (0, 1, 3) */
+/* El color de fondo es el que hereda de body */
+main > section:last-of-type a {
+  color: #161a98;
+}
+
+/* Especificidad: (0, 2, 3) */
+/* El color de primer plano es el que hereda de main > section:last-of-type a */
+main > section:last-of-type a:hover {
+  background: #ffff00;
+}
+
+/* Especificidad: (0,0,1) */
+ol {
+  list-style-type: upper-roman;
+}
+
+/* Especificidad: (0,0,1) */
+ul {
+  padding-left: 3rem;
+  list-style-type: none;
+}
+
+/* El color de fondo lo hereda de body */
+/* Especificidad: (0,0,1) */
+dd {
+  color: #541006;
+}
+
+/* El color de fondo lo hereda de body */
+/* Especificidad: (0,0,1) */
+dt {
+  line-height: 1.5;
+  font-weight: bold;
+  color: #000055;
+}
+
+/* El color de fondo lo hereda de nav */
+/* Especificidad: (0,1,2) */
+nav a.active {
+  color: #a11b7e; /* Color rojo para el enlace activo */
+  font-weight: bold; /* Hacer el texto en negrita */
+}
+
+/* El color de fondo lo hereda del body */
+/* Especificidad: (0,0,2) */
+nav a {
+  text-decoration: none;
+  color: #010100; 
+}
+
+/* Especificidad: (0,1,2) */
+/* El color de fondo lo hereda de body */
+nav a:focus {
+  color: #a11b7e; /* Color destacado para el enlace activo */
+  font-weight: bold; /* Opcional: hacer el enlace más grueso */
+  border-bottom: 0.125rem solid #a11b7e; /* Opcional: subrayar el enlace activo */
+}
+
+/* Media query para pantallas pequeñas (móviles y tabletas) */
+/* Especificidad: (0,0,1) */
+@media (max-width: 465px) {
+  header {
+    flex-direction: column; /* Apilar h1 y nav verticalmente */
+    align-items: flex-start; /* Alinear los elementos al inicio */
+  }
+}
+
+/* Especificidad: (0,0,2) */
+@media screen and (max-width: 465px) {
+  body > p {
+    display: none; /* Ocultar migas de navegación en pantallas pequeñas */
+  }
+}
+
+/* Contenedor del XML */
+/*Especificidad  (013)*/
+main > section:nth-of-type(1) > article {
+  margin-top: 1rem;
+  padding: 1rem;
+  border: 0.2rem solid #800080;
+  border-radius: 0.5rem;
+  background-color: #f9f9f9;
+  font-size: 1rem;
+  color: #333;
+  white-space: pre-wrap; /* Preserva saltos de línea */
+}
+
+/* Contenedor del Mapa KML */
+/*Especificidad  (013)*/
+main > section:nth-of-type(2) > article {
+  display: flex;
+  width: 100%;
+  height: 60vh; /* Altura relativa al 60% de la ventana gráfica */
+  margin-top: 2rem; /* Espacio superior relativo al tamaño de la fuente raíz */
+  border: 0.2rem solid #800080;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+/* Contenedor para SVG */
+/*Especificidad  (013)*/
+/*El color de fondo se hereda de body*/
+main > section:nth-of-type(3) > figure {
+  margin-top: 1rem;
+  padding: 1rem;
+  border: 0.2rem solid #800080;
+  border-radius: 0.5rem;
+  background-color: #f9f9f9;
+  
+  /* Utilizar Flexbox para centrar el SVG */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  /* Tamaño flexible */
+  width: 100%;
+  height: auto; /* Permite que la altura se ajuste según el contenido */
+}
+
+/* Estilos para el SVG dentro de <figure> */
+/*Especificidad  (014)*/
+main > section:nth-of-type(3) > figure > svg {
+  max-width: 100%; /* Asegura que el SVG no exceda el ancho del contenedor */
+  height: auto;    /* Mantiene la proporción del SVG */
+}
+/*Especificidad  (013)*/
+main > section:nth-of-type(2) > div {
+  display: none; /* Ocultar inicialmente */
+  width: 100%; /* Ocupa el 100% del ancho del contenedor padre */
+  height: 60vh; /* Altura relativa al 60% de la ventana gráfica */
+  margin-top: 2rem; /* Espacio superior relativo al tamaño de la fuente raíz */
+
+}
+
+/* Espaciado entre encabezados y contenido */
+/*Especificidad  (002)*/
+main > h3 {
+  margin-bottom: 0.5rem;
+}
+
+/* Ajusta el tamaño del contenedor del mapa dinámico de circuito */
+/*Especificidad  (003)*/
+main > section > label {
+  width: 100%;
+  height: 60vh; /* Ajuste para pantallas pequeñas */
+}
+/*Especificidad  (013)*/
+main > article:nth-of-type(4) > div {
+  display: flex;
+  width: 100vw;
+  height: 57vh;
+
+}
+/*Especificidad  (014)*/
+main > article:nth-of-type(4) > div a{
+  display: none;
+}
+
+
+/*Especificidad  (002)*/
+
+header > button {
+  position: absolute; /* Posición absoluta respecto al contenedor */
+  top: 1rem; /* Separación desde la parte superior */
+  right: 1rem; /* Separación desde la parte derecha */
+  padding: 0.5rem 1rem; /* Espaciado interno */
+  background-color: #a11b7e; /* Color de fondo */
+  color: #ffffff; /* Color del texto */
+  border: none; /* Sin borde */
+  border-radius: 0.25rem; /* Bordes redondeados */
+  font-size: 1rem; /* Tamaño del texto */
+  cursor: pointer; /* Cambiar el cursor a puntero */
+}
+
+/* Especificidad (002) */
+p + article {
+  width: 100%;
+  max-width: 100vh;
+  height: 70vh;
+  position: relative;
+  overflow: hidden; /* <===  */
+  border-radius: 1em;
+}
+
+/* Especificidad (003) */
+p + article h3 {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 0.5em;
+  font-size: 2em;
+}
+
+/* Especificidad (003) */
+p + article img {
+  width: 100%;
+  max-width: 100vh;
+  height: 60vh;
+  position: absolute;
+  transition: all 0.5s;
+  object-fit: cover;
+  border-radius: 0.5em;
+  aspect-ratio: 16 / 9;
+}
+/*El color de fondo se hereda de body*/
+/* Especificidad (003) */
+p + article button {
+  position: absolute;
+  width: 3em;
+  height: 3rem;
+  padding: 0.5em;
+  border: none;
+  cursor: pointer;
+  background-color: #fff;
+  /* color: #FFFFFFFF; heredado de body */
+  font-size: 1em;
+  display: flex;
+  border-radius: 80%;
+  flex-direction: column;
+  align-items:center;
+  justify-content: center;
+}
+
+/* Especificidad (013) */
+p + article button:active {
+  transform: scale(1.1);
+}
+
+/* Especificidad (013) */
+p + article button:nth-of-type(2) {
+  top: 50%;
+  left: 2%;
+}
+
+/* Especificidad (013) */
+p + article button:nth-of-type(1) {
+  top: 50%;
+  right: 2%;
+}

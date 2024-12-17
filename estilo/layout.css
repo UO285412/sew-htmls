@@ -1,0 +1,21 @@
+/*Nestor Fernandez Garcia UO285412*/
+
+/*Especificidad (0,0,1)*/
+header{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items:baseline;
+}
+/*La propiedad flex-direction se redefine*/
+@media (max-width: 465px) {
+  /*Especificidad (0,0,1)*/
+  header{
+    flex-direction: column;
+  }
+  header >nav >a{
+    display:inline-block;
+    padding-top:0.25rem ;
+    padding-bottom: 0.25rem;
+  }
+  }
