@@ -1,4 +1,6 @@
-<html lang="es" xml:lang="es"><head>
+<!DOCTYPE HTML>
+<html lang="es" xml:lang="es">
+<head>
     <!-- Metadatos -->
     <meta charset="UTF-8">
     <title>F1 Desktop - Gestión de Pilotos por Década</title>
@@ -25,7 +27,6 @@
             <a href="../juegos.html" class="active">Juegos</a>
             <a href="../circuito.html" title="Pestaña de circuito">Circuito</a>
             <a href="../meteorologia.html" title="Pestaña de meteorologia">Meteorologia</a>
-            
         </nav>
     </header>
 
@@ -38,7 +39,7 @@
             <form action="ficheros.php" method="POST">
                 <input type="submit" value="Crear Base de Datos y Tablas" name="crear">
             </form>
-                    </section>
+        </section>
 
         <hr>
 
@@ -46,13 +47,14 @@
         <section>
             <h2>Importar Pilotos desde CSV</h2>
             <form action="ficheros.php" method="POST" enctype="multipart/form-data">
-                <label>Selecciona el fichero CSV(PilotosConMasCampeonatos.csv):
-                    <input type="file" name="csv_file" accept=".csv" required="">
+                <label>
+                    Selecciona el fichero CSV (PilotosConMasCampeonatos.csv):
+                    <input type="file" name="csv_file" accept=".csv" required>
                 </label>
                 <br><br>
                 <input type="submit" value="Importar CSV" name="importar">
             </form>
-                    </section>
+        </section>
 
         <hr>
 
@@ -60,8 +62,9 @@
         <section>
             <h2>Exportar Pilotos a CSV</h2>
             <form action="ficheros.php" method="POST">
-                <label>Selecciona la Década:
-                    <select name="decada_exportar" required="">
+                <label>
+                    Selecciona la Década:
+                    <select name="decada_exportar" required>
                         <option value="">--Selecciona--</option>
                         <option value="50s">50s</option>
                         <option value="60s">60s</option>
@@ -75,16 +78,16 @@
                 <br><br>
                 <input type="submit" value="Exportar CSV" name="exportar">
             </form>
-                    </section>
+        </section>
 
         <hr>
 
         <!-- Sección para Mostrar Pilotos por Década -->
         <section>
-    <h2>Pilotos por Década</h2>
-    <p>Importa un archivo CSV para mostrar las tablas.</p></section>
+            <h2>Pilotos por Década</h2>
+            <p>Importa un archivo CSV para mostrar las tablas.</p>
+        </section>
 
     </main>
-
-
-</body></html>
+</body>
+</html>
