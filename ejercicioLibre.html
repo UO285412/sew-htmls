@@ -60,27 +60,26 @@
         <section>
             <h2>Exportar Pilotos a CSV</h2>
             <form action="ficheros.php" method="POST">
-                <p>Selecciona la Década:</p>
-                <label>
-                    <input type="radio" name="decada_exportar" value="50s" required> 50s
+                <label for="decada_50s">
+                    <input id="decada_50s" type="radio" name="decada_exportar" value="50s" required> 50s
                 </label><br>
-                <label>
-                    <input type="radio" name="decada_exportar" value="60s" required> 60s
+                <label for="decada_60s">
+                    <input id="decada_60s" type="radio" name="decada_exportar" value="60s" required> 60s
                 </label><br>
-                <label>
-                    <input type="radio" name="decada_exportar" value="70s" required> 70s
+                <label for="decada_70s">
+                    <input id="decada_70s" type="radio" name="decada_exportar" value="70s" required> 70s
                 </label><br>
-                <label>
-                    <input type="radio" name="decada_exportar" value="80s" required> 80s
+                <label for="decada_80s">
+                    <input id="decada_80s" type="radio" name="decada_exportar" value="80s" required> 80s
                 </label><br>
-                <label>
-                    <input type="radio" name="decada_exportar" value="90s" required> 90s
+                <label for="decada_90s">
+                    <input id="decada_90s" type="radio" name="decada_exportar" value="90s" required> 90s
                 </label><br>
-                <label>
-                    <input type="radio" name="decada_exportar" value="2000s" required> 2000s
+                <label for="decada_2000s">
+                    <input id="decada_2000s" type="radio" name="decada_exportar" value="2000s" required> 2000s
                 </label><br>
-                <label>
-                    <input type="radio" name="decada_exportar" value="2010s" required> 2010s
+                <label for="decada_2010s">
+                    <input id="decada_2010s" type="radio" name="decada_exportar" value="2010s" required> 2010s
                 </label><br><br>
                 <input type="submit" value="Exportar CSV" name="exportar">
             </form>
