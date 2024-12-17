@@ -1,0 +1,38 @@
+<html lang="es"><head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Nestor Fernandez Garcia">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego del Semáforo</title>
+    <link rel="stylesheet" type="text/css" href="estilo/estilo.css">
+    <link rel="stylesheet" type="text/css" href="estilo/layout.css">
+    <script src="js/semaforo.js" defer=""></script>
+    <link rel="stylesheet" href="estilo/semaforo_grid.css">
+    <link rel="icon" href="multimedia/imagenes/favicon.ico">
+</head>
+<body>
+    <header>
+        <h1><a href="index.html">F1 DESKTOP</a></h1>
+        <nav>
+            <a title="Enlace a Inicio" href="index.html">Inicio</a>
+            <a title="Enlace a piloto" href="piloto.html">Piloto</a>
+            <a title="Enlace a noticias" href="noticias.html">Noticias</a>
+            <a title="Enlace a calendario" href="calendario.html">Calendario</a>
+            <a title="Enlace a viajes" href="viajes.php">Viajes</a>
+            <a title="Enlace a juegos" href="juegos.html">Juegos</a>
+            <a title="Enlace a circuito" href="circuito.html">Circuito</a>
+            <a title="Enlace a meteorologia" href="meteorologia.html">Meteorología</a>
+        </nav>
+    </header>
+    <p>Estás en: Inicio | Juegos | Juego del Semáforo</p>
+    
+    <main>
+   <section class="semaforo-section"><h2>Juego de tiempo de reacción</h2><div class="light"></div><div class="light"></div><div class="light"></div><div class="light"></div><button type="button" onclick="semaforo.initSequence()">Arranque</button><button type="button" disabled="" onclick="semaforo.stopReaction()">Reacción</button></section></main>
+    <script src="js/semaforo.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        window.semaforo = new Semaforo();
+    });
+    </script>
+
+
+</body></html>

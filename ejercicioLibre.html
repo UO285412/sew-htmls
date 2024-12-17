@@ -1,0 +1,90 @@
+<html lang="es"><head>
+    <!-- Metadatos -->
+    <meta charset="UTF-8">
+    <title>F1 Desktop - Gestión de Pilotos por Década</title>
+    <meta name="author" content="Nestor Fernandez Garcia">
+    <meta name="description" content="Aplicación para gestionar pilotos con más campeonatos en cada década de la F1">
+    <meta name="keywords" content="F1, Pilotos, Campeonatos, Décadas, CSV">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Enlaces a hojas de estilo -->
+    <link rel="stylesheet" type="text/css" href="../estilo/estilo.css">
+    <link rel="stylesheet" type="text/css" href="../estilo/layout.css">
+    <link rel="icon" href="../multimedia/imagenes/favicon.ico">
+</head>
+
+<body>
+    <header>
+        <h1><a href="../index.html">F1 DESKTOP</a></h1>
+        <nav>
+            <a href="../index.html" title="Inicio F1 Desktop">Inicio</a>
+            <a href="../piloto.html" title="Pestaña del piloto">Piloto</a>
+            <a href="../noticias.html" title="Pestaña de noticias">Noticias</a>
+            <a href="../calendario.html" title="Pestaña de calendario">Calendario</a>
+            <a href="../viajes.php" title="Pestaña de viajes">Viajes</a>
+            <a href="../juegos.html" class="active">Juegos</a>
+            <a href="../circuito.html" title="Pestaña de circuito">Circuito</a>
+            <a href="../meteorologia.html" title="Pestaña de meteorologia">Meteorologia</a>
+            
+        </nav>
+    </header>
+
+    <p>Estás en: Inicio | Ficheros</p>
+
+    <main>
+        <!-- Sección para Crear la Base de Datos y Tablas -->
+        <section>
+            <h2>Crear Base de Datos y Tablas</h2>
+            <form action="ficheros.php" method="POST">
+                <input type="submit" value="Crear Base de Datos y Tablas" name="crear">
+            </form>
+                    </section>
+
+        <hr>
+
+        <!-- Sección para Importar Pilotos desde CSV -->
+        <section>
+            <h2>Importar Pilotos desde CSV</h2>
+            <form action="ficheros.php" method="POST" enctype="multipart/form-data">
+                <label>Selecciona el fichero CSV(PilotosConMasCampeonatos.csv):
+                    <input type="file" name="csv_file" accept=".csv" required="">
+                </label>
+                <br><br>
+                <input type="submit" value="Importar CSV" name="importar">
+            </form>
+                    </section>
+
+        <hr>
+
+        <!-- Sección para Exportar Pilotos a CSV -->
+        <section>
+            <h2>Exportar Pilotos a CSV</h2>
+            <form action="ficheros.php" method="POST">
+                <label>Selecciona la Década:
+                    <select name="decada_exportar" required="">
+                        <option value="">--Selecciona--</option>
+                        <option value="50s">50s</option>
+                        <option value="60s">60s</option>
+                        <option value="70s">70s</option>
+                        <option value="80s">80s</option>
+                        <option value="90s">90s</option>
+                        <option value="2000s">2000s</option>
+                        <option value="2010s">2010s</option>
+                    </select>
+                </label>
+                <br><br>
+                <input type="submit" value="Exportar CSV" name="exportar">
+            </form>
+                    </section>
+
+        <hr>
+
+        <!-- Sección para Mostrar Pilotos por Década -->
+        <section>
+    <h2>Pilotos por Década</h2>
+    <p>Importa un archivo CSV para mostrar las tablas.</p></section>
+
+    </main>
+
+
+</body></html>
