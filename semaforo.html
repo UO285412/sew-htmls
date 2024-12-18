@@ -1,41 +1,76 @@
 
 
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <meta name="author" content="Nestor Fernandez Garcia" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Juego del Semáforo</title>
+    <meta name="description" content="Viajes F1" />
+    <meta name="keywords" content="viajes" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Viajes</title>
+
     <link rel="stylesheet" type="text/css" href="estilo/estilo.css" />
     <link rel="stylesheet" type="text/css" href="estilo/layout.css" />
-    <script src="js/semaforo.js" defer></script>
-    <link rel="stylesheet" href="estilo/semaforo_grid.css" />
+    <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/v3.7.0/mapbox-gl.css" />
     <link rel="icon" href="multimedia/imagenes/favicon.ico" />
+      <!-- Scripts al final del body sin defer para mantener el orden de carga y DOM completo -->
+      
+      <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha384-1H217gwSVyLSIfaLxHbE7dRb3v4mYCKbpQvzx0cegeju1MVsGrX5xXxAvs/HgeFs" crossorigin="anonymous"></script>
+    <script src="https://api.mapbox.com/mapbox-gl-js/v3.7.0/mapbox-gl.js" defer></script> 
+    <script src="js/viajes.js" defer></script>
 </head>
+
 <body>
     <header>
-        <h1><a href="index.html">F1 DESKTOP</a></h1>
+        <h1><a href="index.html"> F1 DESKTOP</a></h1>
         <nav>
             <a title="Enlace a Inicio" href="index.html">Inicio</a>
             <a title="Enlace a piloto" href="piloto.html">Piloto</a>
             <a title="Enlace a noticias" href="noticias.html">Noticias</a>
             <a title="Enlace a calendario" href="calendario.html">Calendario</a>
-            <a title="Enlace a viajes" href="viajes.php">Viajes</a>
+            <a href="viajes.php" class="active">Viajes</a>
             <a title="Enlace a juegos" href="juegos.html">Juegos</a>
             <a title="Enlace a circuito" href="circuito.html">Circuito</a>
-            <a title="Enlace a meteorologia" href="meteorologia.html">Meteorología</a>
+            <a title="Enlace a meteorologia" href="meteorologia.html">Meteorologia</a>
         </nav>
     </header>
-    <p>Estás en: <a href="index.html">Inicio</a> | <a href="juegos.html">Juegos</a>| Juego del Semaforo</p>
-    
+
+    <p>Estás en: Inicio | Viajes</p>
+
     <main>
-        </main>
-    <script src="js/semaforo.js" defer></script>
+        <h2>Viajes para ir a la carrera</h2>
+        <p></p> 
+
+        <article>
+            <h3>Carrusel</h3>
+            <img src="https://live.staticflickr.com/65535/54212505326_3dea101908_m.jpg" alt="Imagen 1 del carrusel" loading="lazy" /><img src="https://live.staticflickr.com/65535/54212710129_494e1ff5be_m.jpg" alt="Imagen 2 del carrusel" loading="lazy" /><img src="https://live.staticflickr.com/65535/54212641823_0e0a930d86_m.jpg" alt="Imagen 3 del carrusel" loading="lazy" /><img src="https://live.staticflickr.com/65535/54211509927_92e20b99f8_m.jpg" alt="Imagen 4 del carrusel" loading="lazy" /><img src="https://live.staticflickr.com/65535/54211216129_302a5edf1f_m.jpg" alt="Imagen 5 del carrusel" loading="lazy" /><img src="https://live.staticflickr.com/65535/54209972152_4a8f7fb414_m.jpg" alt="Imagen 6 del carrusel" loading="lazy" /><img src="https://live.staticflickr.com/65535/54210873931_55c880441c_m.jpg" alt="Imagen 7 del carrusel" loading="lazy" /><img src="https://live.staticflickr.com/65535/54210479635_b857fbb2b6_m.jpg" alt="Imagen 8 del carrusel" loading="lazy" /><img src="https://live.staticflickr.com/65535/54209989184_45d8100461_m.jpg" alt="Imagen 9 del carrusel" loading="lazy" /><img src="https://live.staticflickr.com/65535/54209973515_7a48d9c750_m.jpg" alt="Imagen 10 del carrusel" loading="lazy" />            <button> &gt; </button>
+            <button> &lt; </button>
+        </article>
+
+        <!-- Tipo de Cambio -->
+        <article>
+            <h3>Tipo de Cambio</h3>
+            <p>1 Euro equivale a <strong>7.65 CNY</strong>.</p>        </article>
+        <button>Cargar Mapas</button>
+        <article>
+            <h3>Mapa Estático</h3>
+            <p></p>
+            <div></div>
+        </article>
+        <article>
+            <h3>Mapa Dinámico</h3>
+            <div></div>
+        </article>
+       
+    </main>
+
+  
     <script>
     document.addEventListener('DOMContentLoaded', () => {
-        window.semaforo = new Semaforo();
+        var viajes = new Viajes();
+        viajes.inicializarCarrusel();
     });
-    </script> 
+    </script>
 </body>
 </html>
