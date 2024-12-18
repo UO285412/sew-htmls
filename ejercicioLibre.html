@@ -1,18 +1,17 @@
+
 <!DOCTYPE HTML>
-<html lang="es" xml:lang="es">
+<html lang="es">
 <head>
     <!-- Metadatos -->
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <title>F1 Desktop - Gestión de Pilotos por Década</title>
-    <meta name="author" content="Nestor Fernandez Garcia">
-    <meta name="description" content="Aplicación para gestionar pilotos con más campeonatos en cada década de la F1">
-    <meta name="keywords" content="F1, Pilotos, Campeonatos, Décadas, CSV">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Enlaces a hojas de estilo -->
-    <link rel="stylesheet" type="text/css" href="estilo/estilo.css">
-    <link rel="stylesheet" type="text/css" href="estilo/layout.css">
-    <link rel="icon" href="multimedia/imagenes/favicon.ico">
+    <meta name="author" content="Nestor Fernandez Garcia" />
+    <meta name="description" content="Aplicación para gestionar pilotos con más campeonatos en cada década de la F1" />
+    <meta name="keywords" content="F1, Pilotos, Campeonatos, Décadas, CSV" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="../estilo/estilo.css" />
+    <link rel="stylesheet" type="text/css" href="../estilo/layout.css" />
+    <link rel="icon" href="../multimedia/imagenes/favicon.ico" />
 </head>
 
 <body>
@@ -30,7 +29,7 @@
         </nav>
     </header>
 
-    <p>Estás en: Inicio | Ficheros</p>
+    <p>Estás en: <a href="index.html">Inicio</a> | <a href="juegos.html">Juegos</a>| Ficheros</p>
 
     <main>
         <!-- Sección para Crear la Base de Datos y Tablas -->
@@ -39,7 +38,7 @@
             <form action="ficheros.php" method="POST">
                 <input type="submit" value="Crear Base de Datos y Tablas" name="crear">
             </form>
-        </section>
+                    </section>
 
         <hr>
 
@@ -52,7 +51,7 @@
                 <br><br>
                 <input type="submit" value="Importar CSV" name="importar">
             </form>
-        </section>
+                    </section>
 
         <hr>
 
@@ -87,15 +86,14 @@
                 <br>
                 <input type="submit" value="Exportar CSV" name="exportar">
             </form>
-        </section>
+                    </section>
 
         <hr>
 
         <!-- Sección para Mostrar Pilotos por Década -->
         <section>
             <h2>Pilotos por Década</h2>
-            <p>Importa un archivo CSV para mostrar las tablas.</p>
-        </section>
+            <p>Importa un archivo CSV para mostrar las tablas.</p>        </section>
     </main>
 </body>
 </html>
