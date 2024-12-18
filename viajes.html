@@ -1,28 +1,31 @@
-<!DOCTYPE html>
-<html lang="es" xml:lang="es"><head>
-    <meta charset="UTF-8">
-    <meta name="author" content="Nestor Fernandez Garcia">
-    <meta name="description" content="Viajes F1">
-    <meta name="keywords" content="viajes">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<!DOCTYPE HTML>
+<html lang="es" xml:lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="Nestor Fernandez Garcia" />
+    <meta name="description" content="Viajes F1" />
+    <meta name="keywords" content="viajes" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Viajes</title>
- 
-	<link rel="stylesheet" type="text/css" href="estilo/estilo.css">
-	<link rel="stylesheet" type="text/css" href="estilo/layout.css">
-	<link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/v3.7.0/mapbox-gl.css">
-	<link rel="icon" href="multimedia/imagenes/favicon.ico">
 
-	<script src="js/viajes.js"></script>
-	<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha384-1H217gwSVyLSIfaLxHbE7dRb3v4mYCKbpQvzx0cegeju1MVsGrX5xXxAvs/HgeFs" crossorigin="anonymous"></script>
-	<script src="https://api.mapbox.com/mapbox-gl-js/v3.7.0/mapbox-gl.js"></script> 
-
+    <link rel="stylesheet" type="text/css" href="estilo/estilo.css" />
+    <link rel="stylesheet" type="text/css" href="estilo/layout.css" />
+    <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/v3.7.0/mapbox-gl.css" />
+    <link rel="icon" href="multimedia/imagenes/favicon.ico" />
+      <!-- Scripts al final del body sin defer para mantener el orden de carga y DOM completo -->
+      
+      <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha384-1H217gwSVyLSIfaLxHbE7dRb3v4mYCKbpQvzx0cegeju1MVsGrX5xXxAvs/HgeFs" crossorigin="anonymous"></script>
+    <script src="https://api.mapbox.com/mapbox-gl-js/v3.7.0/mapbox-gl.js" defer></script> 
+    <script src="js/viajes.js" defer></script>
 </head>
 
 <body>
     <header>
         <h1><a href="index.html"> F1 DESKTOP</a></h1>
         <nav>
-            <a title="Enlace a Inicio" href="index.html"> Inicio</a>
+            <a title="Enlace a Inicio" href="index.html">Inicio</a>
             <a title="Enlace a piloto" href="piloto.html">Piloto</a>
             <a title="Enlace a noticias" href="noticias.html">Noticias</a>
             <a title="Enlace a calendario" href="calendario.html">Calendario</a>
@@ -36,38 +39,39 @@
     <p>Estás en: Inicio | Viajes</p>
 
     <main>
-    <h2>Viajes para ir a la carrera</h2>
-    <p></p> 
-    
-    <article>
-        <h3>Carrusel</h3>
-        <img src="https://live.staticflickr.com/65535/54211101391_1036f6bdbb_m.jpg" alt="Imagen 1 del carrusel"><img src="https://live.staticflickr.com/65535/54211216129_302a5edf1f_m.jpg" alt="Imagen 2 del carrusel"><img src="https://live.staticflickr.com/65535/54209972152_4a8f7fb414_m.jpg" alt="Imagen 3 del carrusel"><img src="https://live.staticflickr.com/65535/54210873931_55c880441c_m.jpg" alt="Imagen 4 del carrusel"><img src="https://live.staticflickr.com/65535/54210479635_b857fbb2b6_m.jpg" alt="Imagen 5 del carrusel"><img src="https://live.staticflickr.com/65535/54209989184_45d8100461_m.jpg" alt="Imagen 6 del carrusel"><img src="https://live.staticflickr.com/65535/54209600893_54ee995092_m.jpg" alt="Imagen 7 del carrusel"><img src="https://live.staticflickr.com/65535/54209441680_f53919a7a2_m.jpg" alt="Imagen 8 del carrusel"><img src="https://live.staticflickr.com/65535/54209441050_23cd6d5d53_m.jpg" alt="Imagen 9 del carrusel"><img src="https://live.staticflickr.com/65535/54208973651_1306db81af_m.jpg" alt="Imagen 10 del carrusel">        <button> &gt; </button>
-        <button> &lt; </button>
-    </article>
+        <h2>Viajes para ir a la carrera</h2>
+        <p></p> 
 
-  
+        <article>
+            <h3>Carrusel</h3>
+            <img src="https://live.staticflickr.com/65535/54212710129_494e1ff5be_z.jpg" alt="Imagen 1 del carrusel" loading="lazy" /><img src="https://live.staticflickr.com/65535/54212641823_0e0a930d86_z.jpg" alt="Imagen 2 del carrusel" loading="lazy" /><img src="https://live.staticflickr.com/65535/54211509927_92e20b99f8_z.jpg" alt="Imagen 3 del carrusel" loading="lazy" /><img src="https://live.staticflickr.com/65535/54211216129_302a5edf1f_z.jpg" alt="Imagen 4 del carrusel" loading="lazy" /><img src="https://live.staticflickr.com/65535/54209972152_4a8f7fb414_z.jpg" alt="Imagen 5 del carrusel" loading="lazy" /><img src="https://live.staticflickr.com/65535/54210873931_55c880441c_z.jpg" alt="Imagen 6 del carrusel" loading="lazy" /><img src="https://live.staticflickr.com/65535/54210479635_b857fbb2b6_z.jpg" alt="Imagen 7 del carrusel" loading="lazy" /><img src="https://live.staticflickr.com/65535/54209989184_45d8100461_z.jpg" alt="Imagen 8 del carrusel" loading="lazy" /><img src="https://live.staticflickr.com/65535/54209973515_7a48d9c750_z.jpg" alt="Imagen 9 del carrusel" loading="lazy" /><img src="https://live.staticflickr.com/65535/54209600893_54ee995092_z.jpg" alt="Imagen 10 del carrusel" loading="lazy" />            <button> &gt; </button>
+            <button> &lt; </button>
+        </article>
+
         <!-- Tipo de Cambio -->
         <article>
             <h3>Tipo de Cambio</h3>
-            <p>1 Euro equivale a <strong>7.65 CNY</strong>.</p>        <p>Latitud: 43.2427441</p><p>Longitud: -5.5617737</p></article>
-    
-      
+            <p>1 Euro equivale a <strong>7.65 CNY</strong>.</p>        </article>
+        <button>Cargar Mapas</button>
         <article>
+
             <h3>Mapa Estático</h3>
             <p></p>
-            <div><img src="https://api.mapbox.com/styles/v1/mapbox/streets-v12/static/pin-s+fb0e55(-5.5617737,43.2427441)/-5.5617737,43.2427441,16,0/400x500?access_token=pk.eyJ1IjoibmVzdG9yMjU0MCIsImEiOiJjbTNmMDhzNWQwanppMmxzYWR4NGhxdTg5In0.3yLmtGrb9H9BRfeqAq0rsQ" alt="Mapa estático de Mapbox"></div>
+            <div></div>
         </article>
         <article>
             <h3>Mapa Dinámico</h3>
-            <div class="mapboxgl-map"><div class="mapboxgl-canary" style="visibility: hidden;"></div><div class="mapboxgl-canvas-container mapboxgl-interactive mapboxgl-touch-drag-pan mapboxgl-touch-zoom-rotate"><canvas class="mapboxgl-canvas" tabindex="0" aria-label="Map" role="region" width="435" height="508" style="width: 289.333px; height: 338.198px;"></canvas><div aria-label="Map marker" role="img" class="mapboxgl-marker mapboxgl-marker-anchor-center" style="transform: translate(145px, 169px) translate(-50%, -50%) translate(0px, -14px);"><svg display="block" height="41px" width="27px" viewBox="0 0 27 41"><defs><radialGradient id="shadowGradient"><stop offset="10%" stop-opacity="0.4"></stop><stop offset="100%" stop-opacity="0.05"></stop></radialGradient></defs><ellipse cx="13.5" cy="34.8" rx="10.5" ry="5.25" fill="url(#shadowGradient)"></ellipse><path fill="#3FB1CE" d="M27,13.5C27,19.07 20.25,27 14.75,34.5C14.02,35.5 12.98,35.5 12.25,34.5C6.75,27 0,19.22 0,13.5C0,6.04 6.04,0 13.5,0C20.96,0 27,6.04 27,13.5Z"></path><path opacity="0.25" d="M13.5,0C6.04,0 0,6.04 0,13.5C0,19.22 6.75,27 12.25,34.5C13,35.52 14.02,35.5 14.75,34.5C20.25,27 27,19.07 27,13.5C27,6.04 20.96,0 13.5,0ZM13.5,1C20.42,1 26,6.58 26,13.5C26,15.9 24.5,19.18 22.22,22.74C19.95,26.3 16.71,30.14 13.94,33.91C13.74,34.18 13.61,34.32 13.5,34.44C13.39,34.32 13.26,34.18 13.06,33.91C10.28,30.13 7.41,26.31 5.02,22.77C2.62,19.23 1,15.95 1,13.5C1,6.58 6.58,1 13.5,1Z"></path><circle fill="white" cx="13.5" cy="13.5" r="5.5"></circle></svg></div></div><div class="mapboxgl-control-container"><div class="mapboxgl-ctrl-top-left"></div><div class="mapboxgl-ctrl-top"></div><div class="mapboxgl-ctrl-top-right"></div><div class="mapboxgl-ctrl-right"></div><div class="mapboxgl-ctrl-bottom-right"><div class="mapboxgl-ctrl mapboxgl-ctrl-attrib mapboxgl-compact"><button class="mapboxgl-ctrl-attrib-button" type="button" aria-label="Toggle attribution"><span class="mapboxgl-ctrl-icon" aria-hidden="true" title="Toggle attribution"></span></button><div class="mapboxgl-ctrl-attrib-inner"><a href="https://www.mapbox.com/about/maps/" target="_blank" title="Mapbox" aria-label="Mapbox">© Mapbox</a> <a href="https://www.openstreetmap.org/about/" target="_blank" title="OpenStreetMap" aria-label="OpenStreetMap">© OpenStreetMap</a> <a class="mapbox-improve-map" href="https://apps.mapbox.com/feedback/?owner=mapbox&amp;id=streets-v9&amp;access_token=pk.eyJ1IjoibmVzdG9yMjU0MCIsImEiOiJjbTNmMDhzNWQwanppMmxzYWR4NGhxdTg5In0.3yLmtGrb9H9BRfeqAq0rsQ#/-5.56177/43.24274/14" target="_blank" title="Improve this map" aria-label="Improve this map" rel="noopener nofollow">Improve this map</a></div></div></div><div class="mapboxgl-ctrl-bottom"></div><div class="mapboxgl-ctrl-bottom-left"><div class="mapboxgl-ctrl" style="display: block;"><a class="mapboxgl-ctrl-logo mapboxgl-compact" target="_blank" rel="noopener nofollow" href="https://www.mapbox.com/" aria-label="Mapbox homepage"></a></div></div><div class="mapboxgl-ctrl-left"></div></div></div>
+            <div></div>
         </article>
-    
+       
+    </main>
+
+  
     <script>
+    document.addEventListener('DOMContentLoaded', () => {
         var viajes = new Viajes();
         viajes.inicializarCarrusel();
-
+    });
     </script>
-    
-</main>
-
-</body></html>
+</body>
+</html>
